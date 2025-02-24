@@ -1,0 +1,702 @@
+# Translations template for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-02-22 08:09+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ai/llm.py:194 ai/llm.py:215
+msgid "System prompt for generate_prompts_from_text"
+msgstr ""
+
+#: ai/llm.py:195 ai/llm.py:216
+msgid "User prompt for generate_prompts_from_text"
+msgstr ""
+
+#: ai/llm.py:237 ai/llm.py:259
+msgid "System prompt for generate question"
+msgstr ""
+
+#: ai/llm.py:238 ai/llm.py:260
+msgid "User prompt for generate question"
+msgstr ""
+
+#: ai/llm.py:277 ai/llm.py:294
+msgid "System prompt for summarize documents"
+msgstr ""
+
+#: ai/llm.py:401 tests/test_i18n.py:15 tests/test_i18n.py:20
+msgid "Content prompt template"
+msgstr ""
+
+#: ai/llm.py:402
+msgid "Analysis title prompt template"
+msgstr ""
+
+#: ai/llm.py:403
+msgid "Analysis keywords prompt template"
+msgstr ""
+
+#: ai/llm.py:404
+msgid "Analysis tags prompt template"
+msgstr ""
+
+#: api/auth.py:41 core/middleware.py:103 tests/test_i18n.py:6
+#: tests/test_i18n.py:11
+msgid "Invalid token"
+msgstr ""
+
+#: api/auth.py:47
+msgid "Userid not found in token"
+msgstr ""
+
+#: api/auth.py:55 api/user.py:25 api/user.py:45 api/user.py:63
+msgid "Unauthorized"
+msgstr ""
+
+#: api/graph.py:68 api/graph.py:107
+msgid "lib_id and subject_id are required"
+msgstr ""
+
+#: api/graph.py:72 api/graph.py:111 api/knowledge_lib.py:40
+msgid "Knowledge lib not found"
+msgstr ""
+
+#: api/graph.py:76 services/graph_analyze_service.py:61
+#: services/graph_generate_service.py:59
+msgid "Graph generation or analysis is already in progress."
+msgstr ""
+
+#: api/graph.py:80 services/graph_analyze_service.py:65
+#: services/graph_analyze_service.py:156 services/graph_generate_service.py:63
+msgid "Library is published. Please unpublish the library first."
+msgstr ""
+
+#: api/graph.py:84
+msgid "Knowledge subject not found"
+msgstr ""
+
+#: api/graph.py:114
+msgid "Knowledge lib is generating or analyzing"
+msgstr ""
+
+#: api/graph.py:395
+msgid "File size exceeds {max_file_size} limit"
+msgstr ""
+
+#: api/graph.py:399
+msgid "Unsupported file type"
+msgstr ""
+
+#: api/graph.py:411 api/graph.py:414
+msgid "Upload directory not found"
+msgstr ""
+
+#: api/graph.py:419 api/graph.py:449 api/graph.py:465 api/graph.py:485
+#: api/graph.py:505 api/graph.py:522 api/graph.py:536 api/graph.py:583
+msgid "An unexpected error occurred"
+msgstr ""
+
+#: api/graph.py:439 api/graph.py:493 api/graph.py:512
+msgid "Element id must be provided."
+msgstr ""
+
+#: api/graph.py:459
+msgid "Document not found"
+msgstr ""
+
+#: api/graph.py:477
+msgid "Lib id, subject id, element id and url must be provided."
+msgstr ""
+
+#: api/graph.py:558 services/graph_query_service.py:113
+msgid "Empty result"
+msgstr ""
+
+#: api/knowledge_lib.py:78 api/knowledge_lib.py:93 api/knowledge_lib.py:107
+msgid "Knowledge not found"
+msgstr ""
+
+#: api/knowledge_lib.py:136 api/knowledge_lib.py:181
+msgid "Subject not found"
+msgstr ""
+
+#: api/knowledge_lib.py:164
+msgid "Knowledge lib subject not found"
+msgstr ""
+
+#: core/error_handle.py:45
+msgid "Invalid request body"
+msgstr ""
+
+#: core/middleware.py:108
+msgid "Token not provided"
+msgstr ""
+
+#: graph/__init__.py:110
+msgid "Failed to create index"
+msgstr ""
+
+#: graph/__init__.py:143
+msgid "Failed to query database"
+msgstr ""
+
+#: graph/document.py:138
+msgid "Document node creation failed with no result."
+msgstr ""
+
+#: graph/document.py:189
+msgid "Document node update failed with no result."
+msgstr ""
+
+#: graph/document.py:276
+msgid "Failed to delete documents of node."
+msgstr ""
+
+#: graph/document.py:301
+msgid "Failed to delete document."
+msgstr ""
+
+#: graph/document.py:333
+msgid "Failed to get documents of node."
+msgstr ""
+
+#: graph/document.py:366
+msgid "Failed to get documents by subject."
+msgstr ""
+
+#: graph/document.py:398
+msgid "Failed to get documents by lib."
+msgstr ""
+
+#: graph/document.py:431
+msgid "Failed to get document by element_id."
+msgstr ""
+
+#: graph/document.py:461
+msgid "Failed to get parent element id by document element_id."
+msgstr ""
+
+#: graph/document.py:490
+msgid "Failed to get document by document page."
+msgstr ""
+
+#: graph/document_page.py:136
+msgid "Document page creation failed with no result."
+msgstr ""
+
+#: graph/document_page.py:149
+msgid "Failed to save document page."
+msgstr ""
+
+#: graph/document_page.py:188
+msgid "Failed to add document page node."
+msgstr ""
+
+#: graph/document_page.py:209
+msgid "Failed to add relationships."
+msgstr ""
+
+#: graph/document_page.py:231
+msgid "Failed to delete document pages of parent."
+msgstr ""
+
+#: graph/document_page.py:253
+msgid "Failed to delete document page by element_id."
+msgstr ""
+
+#: graph/document_page.py:279
+msgid "Failed to get document pages of document."
+msgstr ""
+
+#: graph/entity.py:119
+msgid "Entity node creation failed with no result."
+msgstr ""
+
+#: graph/entity.py:196
+msgid "Failed to get entity by content."
+msgstr ""
+
+#: graph/entity.py:221
+msgid "Failed to delete entities of node."
+msgstr ""
+
+#: graph/entity.py:248
+msgid "Failed to delete entity."
+msgstr ""
+
+#: graph/entity.py:280
+msgid "Failed to get entities of node."
+msgstr ""
+
+#: graph/gds_graph.py:120
+msgid "Failed to list GDS graph: No result returned from the database."
+msgstr ""
+
+#: graph/gds_graph.py:133
+msgid "Failed to list GDS graph."
+msgstr ""
+
+#: graph/gds_graph.py:178
+msgid "Failed to create GDS graph: No result returned from the database."
+msgstr ""
+
+#: graph/gds_graph.py:183
+msgid "Failed to create GDS graph."
+msgstr ""
+
+#: graph/gds_graph.py:206
+msgid "Failed to delete GDS graph."
+msgstr ""
+
+#: graph/gds_graph.py:234
+msgid "Failed to check GDS graph: No result returned from the database."
+msgstr ""
+
+#: graph/gds_graph.py:239
+msgid "Failed to check GDS graph."
+msgstr ""
+
+#: graph/graph_generator.py:37
+msgid "lib_name cannot be empty."
+msgstr ""
+
+#: graph/graph_generator.py:39
+msgid "title cannot be empty."
+msgstr ""
+
+#: graph/graph_generator.py:43
+msgid "max_depth must be greater than 1."
+msgstr ""
+
+#: graph/graph_generator.py:45
+msgid "max_depth must be an even number."
+msgstr ""
+
+#: graph/keyword.py:118
+msgid "Keyword node creation failed with no result."
+msgstr ""
+
+#: graph/keyword.py:196
+msgid "Failed to get keyword by content."
+msgstr ""
+
+#: graph/keyword.py:221
+msgid "Failed to delete keywords of node."
+msgstr ""
+
+#: graph/keyword.py:248
+msgid "Failed to delete keyword."
+msgstr ""
+
+#: graph/keyword.py:280
+msgid "Failed to get keywords of node."
+msgstr ""
+
+#: graph/node.py:481
+msgid "Failed to query graph"
+msgstr ""
+
+#: graph/node.py:515
+msgid "The node does not exist."
+msgstr ""
+
+#: graph/node.py:549
+msgid "Failed to query graph node overview"
+msgstr ""
+
+#: graph/node.py:702
+msgid "Failed to delete node"
+msgstr ""
+
+#: graph/node.py:870
+msgid "Failed to find node by document."
+msgstr ""
+
+#: graph/node.py:895
+msgid "Failed to find node by webpage."
+msgstr ""
+
+#: graph/node.py:920
+msgid "Failed to get node by document page."
+msgstr ""
+
+#: graph/relationship.py:127
+msgid "Relationship creation failed with no result."
+msgstr ""
+
+#: graph/relationship.py:148
+msgid "Failed to save relationship"
+msgstr ""
+
+#: graph/relationship.py:180
+msgid "Relationship update failed with no result."
+msgstr ""
+
+#: graph/relationship.py:201
+msgid "Failed to update relationship"
+msgstr ""
+
+#: graph/relationship.py:224 graph/relationship.py:276
+#: graph/relationship.py:413
+msgid "The relationship does not exist."
+msgstr ""
+
+#: graph/tag.py:118
+msgid "Tag node creation failed with no result."
+msgstr ""
+
+#: graph/tag.py:198
+msgid "Failed to get tag by content."
+msgstr ""
+
+#: graph/tag.py:223
+msgid "Failed to delete tags of node."
+msgstr ""
+
+#: graph/tag.py:249
+msgid "Failed to delete tag."
+msgstr ""
+
+#: graph/tag.py:281
+msgid "Failed to get tags of node."
+msgstr ""
+
+#: graph/virtual_node.py:119
+msgid "Virtual node creation failed with no result."
+msgstr ""
+
+#: graph/virtual_node.py:166
+msgid "Virtual node update failed with no result."
+msgstr ""
+
+#: graph/virtual_node.py:220
+msgid "Failed to add virtual node."
+msgstr ""
+
+#: graph/virtual_node.py:253
+msgid "Failed to find useful virtual node."
+msgstr ""
+
+#: graph/webpage.py:136
+msgid "Webpage creation failed with no result."
+msgstr ""
+
+#: graph/webpage.py:149
+msgid "Failed to save webpage."
+msgstr ""
+
+#: graph/webpage.py:187
+msgid "Webpage update failed with no result."
+msgstr ""
+
+#: graph/webpage.py:254
+msgid "Failed to delete webpages of node."
+msgstr ""
+
+#: graph/webpage.py:280
+msgid "Failed to delete webpage by element_id."
+msgstr ""
+
+#: graph/webpage.py:312
+msgid "Failed to get webpages of node."
+msgstr ""
+
+#: graph/webpage.py:345
+msgid "Failed to get webpage by element_id."
+msgstr ""
+
+#: graph/webpage.py:375
+msgid "Failed to get parent element id by webpage element_id."
+msgstr ""
+
+#: graph/webpage.py:404
+msgid "Failed to get webpage by document page."
+msgstr ""
+
+#: schemas/graph.py:8 schemas/graph.py:30
+msgid "List of subject IDs"
+msgstr ""
+
+#: schemas/graph.py:9
+msgid "Type of the node"
+msgstr ""
+
+#: schemas/graph.py:10
+msgid "Content of the node"
+msgstr ""
+
+#: schemas/graph.py:11
+msgid "Type of the parent node"
+msgstr ""
+
+#: schemas/graph.py:12
+msgid "Element ID of the parent node"
+msgstr ""
+
+#: schemas/graph.py:13
+msgid "Content of the parent node"
+msgstr ""
+
+#: schemas/graph.py:14
+msgid "Type of the child node"
+msgstr ""
+
+#: schemas/graph.py:15
+msgid "Element ID of the child node"
+msgstr ""
+
+#: schemas/graph.py:16
+msgid "Content of the child node"
+msgstr ""
+
+#: schemas/graph.py:17
+msgid "Type of the relationship"
+msgstr ""
+
+#: schemas/graph.py:20 schemas/graph.py:29 schemas/graph.py:36
+#: schemas/graph.py:54 schemas/graph.py:63 schemas/graph.py:74
+msgid "The library ID"
+msgstr ""
+
+#: schemas/graph.py:21 schemas/graph.py:37 schemas/graph.py:55
+#: schemas/graph.py:64 schemas/graph.py:75
+msgid "The subject ID"
+msgstr ""
+
+#: schemas/graph.py:22 schemas/graph.py:57 schemas/graph.py:65
+#: schemas/graph.py:76
+msgid "The element ID"
+msgstr ""
+
+#: schemas/graph.py:23
+msgid "The max depth"
+msgstr ""
+
+#: schemas/graph.py:24 schemas/graph.py:31 schemas/graph.py:44
+msgid "The LLM name"
+msgstr ""
+
+#: schemas/graph.py:25 schemas/graph.py:32 schemas/graph.py:50
+#: schemas/graph.py:59 schemas/graph.py:70
+msgid "The embedding model"
+msgstr ""
+
+#: schemas/graph.py:26 schemas/graph.py:33 schemas/graph.py:51
+#: schemas/graph.py:60 schemas/graph.py:71
+msgid "The max tokens each chunk"
+msgstr ""
+
+#: schemas/graph.py:38
+msgid "The message"
+msgstr ""
+
+#: schemas/graph.py:39
+msgid "The prompt element id"
+msgstr ""
+
+#: schemas/graph.py:40
+msgid "The related node element id"
+msgstr ""
+
+#: schemas/graph.py:41
+msgid "The only title"
+msgstr ""
+
+#: schemas/graph.py:42
+msgid "The limit"
+msgstr ""
+
+#: schemas/graph.py:43
+msgid "The offset"
+msgstr ""
+
+#: schemas/graph.py:45
+msgid "The search type"
+msgstr ""
+
+#: schemas/graph.py:46
+msgid "The search scope"
+msgstr ""
+
+#: schemas/graph.py:47
+msgid "The return method"
+msgstr ""
+
+#: schemas/graph.py:48
+msgid "The is summary"
+msgstr ""
+
+#: schemas/graph.py:49
+msgid "The chain type"
+msgstr ""
+
+#: schemas/graph.py:56
+msgid "The parent element ID"
+msgstr ""
+
+#: schemas/graph.py:58 schemas/graph.py:69
+msgid "The content"
+msgstr ""
+
+#: schemas/graph.py:66
+msgid "The source element ID"
+msgstr ""
+
+#: schemas/graph.py:67
+msgid "The target element ID"
+msgstr ""
+
+#: schemas/graph.py:68
+msgid "The type"
+msgstr ""
+
+#: schemas/graph.py:77
+msgid "The URL"
+msgstr ""
+
+#: schemas/result.py:6
+msgid "Executing success"
+msgstr ""
+
+#: schemas/result.py:13
+msgid "Failed to execute"
+msgstr ""
+
+#: services/graph_analyze_service.py:56 services/graph_analyze_service.py:75
+msgid "Lib id and subject id are required."
+msgstr ""
+
+#: services/graph_analyze_service.py:152
+msgid "Graph generation is already in progress."
+msgstr ""
+
+#: services/graph_query_service.py:91
+msgid "Knowledge library ID is required"
+msgstr ""
+
+#: services/graph_query_service.py:95
+msgid "Knowledge library not found"
+msgstr ""
+
+#: services/graph_query_service.py:98
+msgid "Knowledge library is not published"
+msgstr ""
+
+#: services/graph_query_service.py:291
+msgid "The data from the URL: {url}"
+msgstr ""
+
+#: services/graph_query_service.py:296
+msgid "The data from the file: {file_name}"
+msgstr ""
+
+#: services/graph_query_service.py:303
+msgid "**Entities**"
+msgstr ""
+
+#: services/graph_query_service.py:307
+msgid "**Keywords**"
+msgstr ""
+
+#: services/graph_query_service.py:311
+msgid "**Tags**"
+msgstr ""
+
+#: services/knowledge_lib_service.py:42 services/knowledge_lib_service.py:127
+msgid "Title must be provided."
+msgstr ""
+
+#: services/knowledge_lib_service.py:196
+msgid "Knowledge library not found."
+msgstr ""
+
+#: services/knowledge_lib_service.py:201
+msgid "Cannot toggle publish status while generating or analyzing."
+msgstr ""
+
+#: services/knowledge_lib_service.py:226
+msgid "Failed to update knowledge library publish status: {e}"
+msgstr ""
+
+#: services/knowledge_lib_service.py:245 services/knowledge_lib_service.py:293
+msgid "Name must be provided."
+msgstr ""
+
+#: services/user_service.py:22 services/user_service.py:141
+msgid "Username must be provided."
+msgstr ""
+
+#: services/user_service.py:25 services/user_service.py:144
+msgid "Email must be provided."
+msgstr ""
+
+#: services/user_service.py:28
+msgid "Password must be provided."
+msgstr ""
+
+#: services/user_service.py:35
+msgid "Username already registered"
+msgstr ""
+
+#: services/user_service.py:43 services/user_service.py:166
+msgid "The user already exists, please check the username, email or mobile."
+msgstr ""
+
+#: services/user_service.py:45
+msgid "Failed to register user"
+msgstr ""
+
+#: services/user_service.py:58
+msgid "Username or password is incorrect"
+msgstr ""
+
+#: services/user_service.py:63
+msgid "Invalid credentials"
+msgstr ""
+
+#: services/user_service.py:116 services/user_service.py:126
+msgid "User not found"
+msgstr ""
+
+#: services/user_service.py:153 services/user_service.py:184
+#: services/user_service.py:211
+msgid "User not found."
+msgstr ""
+
+#: services/user_service.py:168
+msgid "Failed to update user"
+msgstr ""
+
+#: services/user_service.py:196
+msgid "Original password must be provided."
+msgstr ""
+
+#: services/user_service.py:199
+msgid "New password must be provided."
+msgstr ""
+
+#: services/user_service.py:202
+msgid "Confirm password must be provided."
+msgstr ""
+
+#: services/user_service.py:205
+msgid "New password and confirm password must be the same."
+msgstr ""
+
+#: services/user_service.py:214
+msgid "Original password is incorrect."
+msgstr ""
+

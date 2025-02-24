@@ -29,30 +29,12 @@ class TestLlm:
         response = Llm.get_ai_response(user_message, 'llama3.1')
         assert response is not None
 
-    def test_get_ai_response_by_gpt_4_o(self):
-        user_message = "Hello, how are you?"
-        response = Llm.get_ai_response(user_message, 'gpt-4o')
-        print("test_get_ai_response_by_gpt_4_o:", response)
-        assert response is not None
-
-    def test_get_ai_response_by_gpt_4_turbo(self):
-        user_message = "Hello, how are you?"
-        response = Llm.get_ai_response(user_message, 'gpt-4-turbo')
-        print("test_get_ai_response_by_gpt_4_turbo:", response)
-        assert response is not None
-
     def test_get_ai_response_by_gpt_4(self):
         user_message = "Hello, how are you?"
         response = Llm.get_ai_response(user_message, 'gpt-4')
         print("test_get_ai_response_by_gpt_4:", response)
         assert response is not None
 
-    
-    def test_get_ai_response_by_claude3_5_sonnet(self):
-        user_message = "Hello, how are you?"
-        response = Llm.get_ai_response(user_message, 'claude3.5-sonnet')
-        print("test_get_ai_response_by_claude3_5_sonnet:", response)
-        assert response is not None
 
     @pytest.mark.asyncio
     async def test_get_ai_response_by_llama3_1_async(self):

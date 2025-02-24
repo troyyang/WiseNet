@@ -74,7 +74,6 @@ class Llm:
             elif llm_name == "gpt-4":
                 return OpenAI(model="gpt-4", api_key=config.OPENAI_API_KEY, request_timeout=60, **params)
             elif llm_name == "claude3.5-sonnet":
-                print("llm_name:", llm_name)
                 return ChatAnthropic(model="claude-3-5-sonnet-latest", api_key=config.ANTHROPIC_API_KEY, default_request_timeout=60, **params)
             elif llm_name == "claude3.5-haiku":
                 return ChatAnthropic(model="claude-3-5-haiku-latest", api_key=config.ANTHROPIC_API_KEY, default_request_timeout=60, **params)
