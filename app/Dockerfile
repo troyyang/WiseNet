@@ -24,7 +24,7 @@ RUN curl -sSL https://install.python-poetry.org | python3 - && \
 ENV PATH="${POETRY_HOME}/bin:${PATH}"
 
 # Add Poetry plugin for PyPI mirror
-RUN poetry self add poetry-plugin-pypi-mirror
+# RUN poetry self add poetry-plugin-pypi-mirror
 # ENV POETRY_PYPI_MIRROR_URL=https://mirrors.aliyun.com/pypi/simple/
 # ENV POETRY_PYPI_MIRROR_URL=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 # Configure Poetry to not create virtual environments
