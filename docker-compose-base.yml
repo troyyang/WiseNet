@@ -1,0 +1,101 @@
+services:
+  postgres:
+    image: postgres:17.2-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-wisenet}
+      POSTGRES_USER: ${POSTGRES_USER:-wisenet}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-wisenet}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - ./app/postgres/init-scripts:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-wisenet}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - wisenet_network
+
+  neo4j:
+    image: neo4j:5.26.0-community-ubi9
+    restart: always
+    container_name: neo4j
+    environment:
+      NEO4J_AUTH: "${NEO4J_USERNAME:-neo4j}/${NEO4J_PASSWORD:-wisenety}"
+      NEO4J_PLUGINS: '["apoc", "graph-data-science"]'
+      NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+    volumes:
+      - neo4j_data:/data # data storage
+      - neo4j_logs:/logs # logs storage
+    ports:
+      - "7474:7474"  # HTTP port
+      - "7687:7687"  # Bolt port
+    networks:
+      - wisenet_network
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7474"]
+      interval: 120s
+      timeout: 120s
+      retries: 20
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: always
+    container_name: ollama
+    mem_reservation: 8g
+    mem_limit: 32g
+    ports:
+      - "11434:11434"
+    networks:
+      - wisenet_network
+    entrypoint: /bin/sh -c "/scripts/pull_models.sh"
+    volumes:
+      - ollama_data:/root/.ollama
+      - ./ollama/scripts:/scripts
+    environment:
+      OLLAMA_MODELS: "llama3.1 wizardlm2"
+      # run "docker logs ollama" until the message "All models pulled successfully" appears.
+      # run "docker exec -it ollama ollama list" to check if the models have been downloaded.
+      # run "docker exec -it ollama ollama pull llama3.1" if the llama3.1 model failed to download.
+      # run "docker exec -it ollama ollama pull wizardlm2" if the wizardlm2 model failed to download.
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 120s
+      timeout: 120s
+      retries: 20
+    depends_on:
+      neo4j:
+        condition: service_healthy
+
+volumes:
+  neo4j_data: 
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: $NEO4J_DIR/data
+  neo4j_logs:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: $NEO4J_DIR/logs
+  ollama_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: $OLLAMA_DIR
+
+networks:
+  wisenet_network:
+    driver: bridge

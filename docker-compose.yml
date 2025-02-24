@@ -1,0 +1,72 @@
+
+# Extend from base services
+include:
+  - docker-compose-base.yml
+
+services:
+  app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: wisenet/app:latest
+    container_name: wisenet-server
+    networks:
+      - wisenet_network
+    ports:
+      - "${API_PORT:-8088}:8088"
+    volumes:
+      - ./.env:/app/.env
+      - wisenet_app_data:/app/data
+      - wisenet_app_cache:/root/.cache
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8088"]
+      interval: 600s
+      timeout: 5s
+      retries: 10
+    depends_on:
+      ollama:
+        condition: service_healthy
+      neo4j:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        API_BASE_URL: ${FRONTEND_API_BASE_URL:-http://localhost:8088}
+    image: wisenet/frontend:latest
+    container_name: wisenet-frontend
+    networks:
+      - wisenet_network
+    ports:
+      - "${FRONTEND_PORT:-3000}:3000"
+    restart: always
+    depends_on:
+      - app
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 600s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  wisenet_app_data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: $WISENET_DATA_DIR/app/data
+  wisenet_app_cache:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: $WISENET_DATA_DIR/app/cache
+networks:
+  wisenet_network:
+    driver: bridge

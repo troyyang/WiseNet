@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "wisenet"
+version = "0.1.0"
+description = ""
+authors = ["Troy Yang <troy.yang2@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.13"
+pydantic-settings = "^2.1.0"
+python-dotenv = "^1.0.0"
+pytest = "^8.3.4"
+pytest-html = "^4.1.1"
+pytest-metadata = "^3.1.1"
+langchain = "^0.3.12"
+langchain-core = "^0.3.25"
+langchain-community = "^0.3.12"
+langchain-text-splitters = "^0.3.3"
+dashscope = "^1.20.14"
+langchain-ollama = "^0.2.1"
+neo4j = "^5.27.0"
+langchain-neo4j = "^0.1.1"
+fastapi = {extras = ["standard"], version = "^0.115.6"}
+uvicorn = "^0.20.0"
+psycopg2 = "^2.9.10"
+passlib = "^1.7.4"
+pyjwt = "^2.10.1"
+huggingface-hub = "^0.27.0"
+transformers = {extras = ["torch"], version = "^4.47.1"}
+sentence-transformers = "^3.3.1"
+spacy = "^3.8.3"
+langid = "^1.1.6"
+sentencepiece = "^0.2.0"
+langchain-unstructured = "^0.1.6"
+unstructured = {extras = ["all-docs", "docx", "pptx"], version = "^0.16.12"}
+pandas = "^2.2.3"
+openpyxl = "^3.1.5"
+lxml = "^5.3.0"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.37"}
+asyncpg = "^0.30.0"
+pytest-asyncio = "^0.25.2"
+langchain-deepseek = "^0.1.1"
+langchain-anthropic = "^0.3.7"
+langchain-openai = "^0.3.4"
+spacy-pkuseg = ">=0.0.27,<0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[pytest]
+asyncio_mode = "auto"
+[tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "session"

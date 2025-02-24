@@ -1,7 +1,5 @@
-- [中文](README_zh.md) | [Français](README_fr.md) | [Española](README_es.md) | [日本語](README_ja.md)
-
 # WiseNet
-## **Intelligent Knowledge Base Construction Tool** 
+## **WiseNet: Intelligent Knowledge Base Construction Tool**
 
 ---
 

@@ -1,0 +1,31 @@
+export default {
+  'menu.user.setting': '用户设置',
+  'userSetting.tab.basicInformation': '基本信息',
+  'userSetting.tab.securitySettings': '安全设置',
+  'userSetting.basicInfo.form.label.username': '用户名称',
+  'userSetting.basicInfo.placeholder.username': '请输入用户名称',
+  'userSetting.basicInfo.form.error.username.required': '请输入用户名称',
+  'userSetting.basicInfo.form.label.email': '邮箱',
+  'userSetting.basicInfo.placeholder.email': `请输入邮箱地址，如xxx{'@'}bytedance.com`,
+  'userSetting.basicInfo.form.error.email.required': '请输入邮箱',
+  'userSetting.basicInfo.form.label.mobile': '手机号码',
+  'userSetting.basicInfo.placeholder.mobile': '请输入手机号码',
+  'userSetting.form.submit': '提交',
+  'userSetting.form.reset': '重置',
+  'userSetting.securitySettings.orgPassword.label': '原始密码',
+  'userSetting.securitySettings.orgPassword.placeholder': '请输入原始密码',
+  'userSetting.securitySettings.newPassword.label': '新密码',
+  'userSetting.securitySettings.newPassword.placeholder': '请输入新密码',
+  'userSetting.securitySettings.confirmPassword.label': '确认密码',
+  'userSetting.securitySettings.confirmPassword.placeholder':
+    '请再次输入新密码',
+  'userSetting.securitySettings.orgPassword.empty.errMsg': '请输入原始密码',
+  'userSetting.securitySettings.newPassword.empty.errMsg': '请输入新密码',
+  'userSetting.securitySettings.newPassword.duplicate.errMsg':
+    '原始密码和新密码不能相同！请重新输入。',
+  'userSetting.securitySettings.confirmPassword.duplicate.errMsg':
+    '新密码和确认密码不匹配！请重新输入。',
+  'userSetting.securitySettings.submit': '提交',
+  'userSetting.securitySettings.reset': '重置',
+  'userSetting.securitySettings.update.success': '更新成功',
+};

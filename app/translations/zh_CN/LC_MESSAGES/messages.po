@@ -1,0 +1,743 @@
+# Chinese translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-02-22 08:09+0800\n"
+"PO-Revision-Date: 2023-11-28 19:44-0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: zh <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: ai/llm.py:194 ai/llm.py:215
+msgid "System prompt for generate_prompts_from_text"
+msgstr ""
+"你是一个专业的提示词生成助手，负责提炼一段文本的关键词，扩展成多个有用的提示词。输出的提示词为JSON对象，请参考以下格式：\n"
+"{{\"result\": [{{\"id\": 1, \"prompt\": \"提示词\"}}]}}\n"
+"以下是结果为空的JSON对象的标准输出格式： \n"
+"{{\"result\": []}}"
+
+#: ai/llm.py:195 ai/llm.py:216
+msgid "User prompt for generate_prompts_from_text"
+msgstr ""
+"请根据以下文本生成{count}个相关的提示词：\n"
+"\"{input}\""
+
+#: ai/llm.py:237 ai/llm.py:259
+msgid "System prompt for generate question"
+msgstr ""
+"你是一个专业的问题生成助手，负责根据一段文本反向推断问题，扩展成多个有用的问题。输出的问题为JSON对象，请参考以下格式：\n"
+"{{\"result\": [{{\"id\": 1, \"question\": \"问题\"}}]}}\n"
+"以下是结果为空的JSON对象的标准输出格式： \n"
+"{{\"result\": []}}"
+
+#: ai/llm.py:238 ai/llm.py:260
+msgid "User prompt for generate question"
+msgstr ""
+"请反向推断出以下文本的{count}个对应的问题，输出语言限定为[中文]：\n"
+"\"{input}\""
+
+#: ai/llm.py:277 ai/llm.py:294
+msgid "System prompt for summarize documents"
+msgstr ""
+"{context}\n"
+"为上述内容制定标题和综合摘要。输出的结果为JSON对象，请参考以下格式：\n"
+"{{\"result\": {{\"title\": \"标题内容\", \"summary\": \"综合摘要内容\"}}}}\n"
+"以下是结果为空的JSON对象的标准输出格式： \n"
+"{{\"result\": {{}}}}\n"
+"输出结果的指定语言为[中文]"
+
+#: ai/llm.py:401 tests/test_i18n.py:15 tests/test_i18n.py:20
+msgid "Content prompt template"
+msgstr ""
+"{input}\n"
+"请根据以上信息，生成一段描述信息，字数限制在300个以内，输出语言限定为[中文]。"
+
+#: ai/llm.py:402
+msgid "Analysis title prompt template"
+msgstr ""
+"{input}\n"
+"为以上文本创建一个标题。标题应抓住内容的精髓，字数限制在[20]个以内，输出语言限定为[中文]。输出的标题为JSON对象，请参考以下格式:\n"
+"{{\"result\": \"title content\"}}\n"
+"以下是结果为空的JSON对象的标准输出格式： \n"
+"{{\"result\": \"\"}} \n"
+
+#: ai/llm.py:403
+msgid "Analysis keywords prompt template"
+msgstr ""
+"{input}\n"
+"确定并列出与上述文本最相关的[3]个关键词。这些关键词应反映叙述的核心概念、主题或独特方面，有助于优化搜索或主题分析。输出的关键词为JSON对象，请参考以下格式:"
+"\n"
+"{{\"result\": [\"keyword word 1\", \"keyword word 2\", \"keyword word "
+"3\"]}}\n"
+"以下是结果为空的JSON对象的标准输出格式： \n"
+"{{\"result\": []}} \n"
+
+#: ai/llm.py:404
+msgid "Analysis tags prompt template"
+msgstr ""
+"{input}\n"
+"生成[3]个标签，囊括上述文本的精髓、主题和独特元素。这些标签应简洁、有针对性，并且有助于在平台或数据库上进行分类或发现。输出的标签为JSON对象，请参考以下格式:"
+"\n"
+"{{\"result\": [\"tag word 1\", \"tag word 2\", \"tag word 3\"]}}\n"
+"以下是结果为空的JSON对象的标准输出格式： \n"
+"{{\"result\": []}} \n"
+
+#: api/auth.py:41 core/middleware.py:103 tests/test_i18n.py:6
+#: tests/test_i18n.py:11
+msgid "Invalid token"
+msgstr "无效令牌"
+
+#: api/auth.py:47
+msgid "Userid not found in token"
+msgstr "用户ID不存在于令牌中"
+
+#: api/auth.py:55 api/user.py:25 api/user.py:45 api/user.py:63
+msgid "Unauthorized"
+msgstr "未授权"
+
+#: api/graph.py:68 api/graph.py:107
+msgid "lib_id and subject_id are required"
+msgstr "lib_id和subject_id是必需的"
+
+#: api/graph.py:72 api/graph.py:111 api/knowledge_lib.py:40
+msgid "Knowledge lib not found"
+msgstr "知识库不存在"
+
+#: api/graph.py:76 services/graph_analyze_service.py:61
+#: services/graph_generate_service.py:59
+msgid "Graph generation or analysis is already in progress."
+msgstr "图谱正在生成或分析"
+
+#: api/graph.py:80 services/graph_analyze_service.py:65
+#: services/graph_analyze_service.py:156 services/graph_generate_service.py:63
+msgid "Library is published. Please unpublish the library first."
+msgstr "知识库已发布，请先取消发布"
+
+#: api/graph.py:84
+msgid "Knowledge subject not found"
+msgstr "知识库主题不存在"
+
+#: api/graph.py:114
+msgid "Knowledge lib is generating or analyzing"
+msgstr "知识库正在生成或分析"
+
+#: api/graph.py:395
+msgid "File size exceeds {max_file_size} limit"
+msgstr "文件大小超过{max_file_size}限制"
+
+#: api/graph.py:399
+msgid "Unsupported file type"
+msgstr "不支持的文件类型"
+
+#: api/graph.py:411 api/graph.py:414
+msgid "Upload directory not found"
+msgstr "上传目录不存在"
+
+#: api/graph.py:419 api/graph.py:449 api/graph.py:465 api/graph.py:485
+#: api/graph.py:505 api/graph.py:522 api/graph.py:536 api/graph.py:583
+msgid "An unexpected error occurred"
+msgstr "发生意外错误"
+
+#: api/graph.py:439 api/graph.py:493 api/graph.py:512
+msgid "Element id must be provided."
+msgstr "元素ID必须提供"
+
+#: api/graph.py:459
+msgid "Document not found"
+msgstr "文档不存在"
+
+#: api/graph.py:477
+msgid "Lib id, subject id, element id and url must be provided."
+msgstr "知识库ID、主题ID、元素ID和URL必须提供"
+
+#: api/graph.py:558 services/graph_query_service.py:113
+msgid "Empty result"
+msgstr "没有记录"
+
+#: api/knowledge_lib.py:78 api/knowledge_lib.py:93 api/knowledge_lib.py:107
+msgid "Knowledge not found"
+msgstr "知识不存在"
+
+#: api/knowledge_lib.py:136 api/knowledge_lib.py:181
+msgid "Subject not found"
+msgstr "主题不存在"
+
+#: api/knowledge_lib.py:164
+msgid "Knowledge lib subject not found"
+msgstr "知识库主题不存在"
+
+#: core/error_handle.py:45
+msgid "Invalid request body"
+msgstr "无效请求"
+
+#: core/middleware.py:108
+msgid "Token not provided"
+msgstr "令牌必须提供"
+
+#: graph/__init__.py:110
+msgid "Failed to create index"
+msgstr "创建索引失败"
+
+#: graph/__init__.py:143
+msgid "Failed to query database"
+msgstr "查询数据库失败"
+
+#: graph/document.py:138
+msgid "Document node creation failed with no result."
+msgstr "创建文档节点失败"
+
+#: graph/document.py:189
+msgid "Document node update failed with no result."
+msgstr "更新文档节点失败"
+
+#: graph/document.py:276
+msgid "Failed to delete documents of node."
+msgstr "删除节点的文档失败"
+
+#: graph/document.py:301
+msgid "Failed to delete document."
+msgstr "删除文档失败"
+
+#: graph/document.py:333
+msgid "Failed to get documents of node."
+msgstr "获取文档节点失败"
+
+#: graph/document.py:366
+msgid "Failed to get documents by subject."
+msgstr "获取主题的文档失败"
+
+#: graph/document.py:398
+msgid "Failed to get documents by lib."
+msgstr "获取知识库的文档失败"
+
+#: graph/document.py:431
+msgid "Failed to get document by element_id."
+msgstr "通过元素ID获取文档失败"
+
+#: graph/document.py:461
+msgid "Failed to get parent element id by document element_id."
+msgstr "通过文档元素ID获取父元素ID失败"
+
+#: graph/document.py:490
+msgid "Failed to get document by document page."
+msgstr "通过文档页面获取文档失败"
+
+#: graph/document_page.py:136
+msgid "Document page creation failed with no result."
+msgstr "创建文档页面失败"
+
+#: graph/document_page.py:149
+msgid "Failed to save document page."
+msgstr "保存文档页面失败"
+
+#: graph/document_page.py:188
+msgid "Failed to add document page node."
+msgstr "添加文档页面节点失败"
+
+#: graph/document_page.py:209
+msgid "Failed to add relationships."
+msgstr "添加关系失败"
+
+#: graph/document_page.py:231
+msgid "Failed to delete document pages of parent."
+msgstr "删除父节点的文档页面失败"
+
+#: graph/document_page.py:253
+msgid "Failed to delete document page by element_id."
+msgstr "通过元素ID删除文档页面失败"
+
+#: graph/document_page.py:279
+msgid "Failed to get document pages of document."
+msgstr "获取文档的文档页面失败"
+
+#: graph/entity.py:119
+msgid "Entity node creation failed with no result."
+msgstr "创建实体节点失败"
+
+#: graph/entity.py:196
+msgid "Failed to get entity by content."
+msgstr "根据内容获取实体失败"
+
+#: graph/entity.py:221
+msgid "Failed to delete entities of node."
+msgstr "删除节点的实体失败"
+
+#: graph/entity.py:248
+msgid "Failed to delete entity."
+msgstr "删除实体失败"
+
+#: graph/entity.py:280
+msgid "Failed to get entities of node."
+msgstr "获取节点的实体失败"
+
+#: graph/gds_graph.py:120
+msgid "Failed to list GDS graph: No result returned from the database."
+msgstr "列出GDS图失败：数据库未返回结果"
+
+#: graph/gds_graph.py:133
+msgid "Failed to list GDS graph."
+msgstr "列出GDS图失败"
+
+#: graph/gds_graph.py:178
+msgid "Failed to create GDS graph: No result returned from the database."
+msgstr "创建GDS图失败：数据库未返回结果"
+
+#: graph/gds_graph.py:183
+msgid "Failed to create GDS graph."
+msgstr "创建GDS图失败"
+
+#: graph/gds_graph.py:206
+msgid "Failed to delete GDS graph."
+msgstr "删除GDS图失败"
+
+#: graph/gds_graph.py:234
+msgid "Failed to check GDS graph: No result returned from the database."
+msgstr "检查GDS图失败：数据库未返回结果"
+
+#: graph/gds_graph.py:239
+msgid "Failed to check GDS graph."
+msgstr "检查GDS图失败"
+
+#: graph/graph_generator.py:37
+msgid "lib_name cannot be empty."
+msgstr "知识库名称不能为空"
+
+#: graph/graph_generator.py:39
+msgid "title cannot be empty."
+msgstr "标题不能为空"
+
+#: graph/graph_generator.py:43
+msgid "max_depth must be greater than 1."
+msgstr "最大深度必须大于1"
+
+#: graph/graph_generator.py:45
+msgid "max_depth must be an even number."
+msgstr "最大深度必须是偶数"
+
+#: graph/keyword.py:118
+msgid "Keyword node creation failed with no result."
+msgstr "创建关键词节点失败"
+
+#: graph/keyword.py:196
+msgid "Failed to get keyword by content."
+msgstr "根据内容获取关键词失败"
+
+#: graph/keyword.py:221
+msgid "Failed to delete keywords of node."
+msgstr "删除节点的关键词失败"
+
+#: graph/keyword.py:248
+msgid "Failed to delete keyword."
+msgstr "删除关键词失败"
+
+#: graph/keyword.py:280
+msgid "Failed to get keywords of node."
+msgstr "获取节点的关键词失败"
+
+#: graph/node.py:481
+msgid "Failed to query graph"
+msgstr "查询图谱失败"
+
+#: graph/node.py:515
+msgid "The node does not exist."
+msgstr "节点不存在"
+
+#: graph/node.py:549
+msgid "Failed to query graph node overview"
+msgstr "查询图谱节点概览失败"
+
+#: graph/node.py:702
+msgid "Failed to delete node"
+msgstr "删除节点失败"
+
+#: graph/node.py:870
+msgid "Failed to find node by document."
+msgstr "通过文档查找节点失败"
+
+#: graph/node.py:895
+msgid "Failed to find node by webpage."
+msgstr "通过网页查找节点失败"
+
+#: graph/node.py:920
+msgid "Failed to get node by document page."
+msgstr "通过文档页面获取节点失败"
+
+#: graph/relationship.py:127
+msgid "Relationship creation failed with no result."
+msgstr "创建关系失败"
+
+#: graph/relationship.py:148
+msgid "Failed to save relationship"
+msgstr "保存关系失败"
+
+#: graph/relationship.py:180
+msgid "Relationship update failed with no result."
+msgstr "更新关系失败"
+
+#: graph/relationship.py:201
+msgid "Failed to update relationship"
+msgstr "更新关系失败"
+
+#: graph/relationship.py:224 graph/relationship.py:276
+#: graph/relationship.py:413
+msgid "The relationship does not exist."
+msgstr "关系不存在"
+
+#: graph/tag.py:118
+msgid "Tag node creation failed with no result."
+msgstr "创建标签节点失败"
+
+#: graph/tag.py:198
+msgid "Failed to get tag by content."
+msgstr "根据内容获取标签失败"
+
+#: graph/tag.py:223
+msgid "Failed to delete tags of node."
+msgstr "删除节点的标签失败"
+
+#: graph/tag.py:249
+msgid "Failed to delete tag."
+msgstr "删除标签失败"
+
+#: graph/tag.py:281
+msgid "Failed to get tags of node."
+msgstr "获取节点的标签失败"
+
+#: graph/virtual_node.py:119
+msgid "Virtual node creation failed with no result."
+msgstr "创建虚拟节点失败"
+
+#: graph/virtual_node.py:166
+msgid "Virtual node update failed with no result."
+msgstr "更新虚拟节点失败"
+
+#: graph/virtual_node.py:220
+msgid "Failed to add virtual node."
+msgstr "添加虚拟节点失败"
+
+#: graph/virtual_node.py:253
+msgid "Failed to find useful virtual node."
+msgstr "查找有用的虚拟节点失败"
+
+#: graph/webpage.py:136
+msgid "Webpage creation failed with no result."
+msgstr "创建网页节点失败"
+
+#: graph/webpage.py:149
+msgid "Failed to save webpage."
+msgstr "保存网页失败"
+
+#: graph/webpage.py:187
+msgid "Webpage update failed with no result."
+msgstr "更新网页节点失败"
+
+#: graph/webpage.py:254
+msgid "Failed to delete webpages of node."
+msgstr "删除节点的网页失败"
+
+#: graph/webpage.py:280
+msgid "Failed to delete webpage by element_id."
+msgstr "通过元素ID删除网页失败"
+
+#: graph/webpage.py:312
+msgid "Failed to get webpages of node."
+msgstr "获取节点的网页失败"
+
+#: graph/webpage.py:345
+msgid "Failed to get webpage by element_id."
+msgstr "通过元素ID获取网页失败"
+
+#: graph/webpage.py:375
+msgid "Failed to get parent element id by webpage element_id."
+msgstr "通过网页元素ID获取父元素ID失败"
+
+#: graph/webpage.py:404
+msgid "Failed to get webpage by document page."
+msgstr "通过文档页面获取网页失败"
+
+#: schemas/graph.py:8 schemas/graph.py:30
+msgid "List of subject IDs"
+msgstr "主题ID列表"
+
+#: schemas/graph.py:9
+msgid "Type of the node"
+msgstr "节点类型"
+
+#: schemas/graph.py:10
+msgid "Content of the node"
+msgstr ""
+"{input}\n"
+"请根据以上信息，生成一段描述信息，字数限制在300个以内，输出语言限定为[中文]。"
+
+#: schemas/graph.py:11
+msgid "Type of the parent node"
+msgstr "父节点类型"
+
+#: schemas/graph.py:12
+msgid "Element ID of the parent node"
+msgstr "父节点元素ID"
+
+#: schemas/graph.py:13
+msgid "Content of the parent node"
+msgstr "父节点内容"
+
+#: schemas/graph.py:14
+msgid "Type of the child node"
+msgstr "子节点类型"
+
+#: schemas/graph.py:15
+msgid "Element ID of the child node"
+msgstr "子节点元素ID"
+
+#: schemas/graph.py:16
+msgid "Content of the child node"
+msgstr "子节点内容"
+
+#: schemas/graph.py:17
+msgid "Type of the relationship"
+msgstr "关系类型"
+
+#: schemas/graph.py:20 schemas/graph.py:29 schemas/graph.py:36
+#: schemas/graph.py:54 schemas/graph.py:63 schemas/graph.py:74
+msgid "The library ID"
+msgstr "知识库ID"
+
+#: schemas/graph.py:21 schemas/graph.py:37 schemas/graph.py:55
+#: schemas/graph.py:64 schemas/graph.py:75
+msgid "The subject ID"
+msgstr "主题ID"
+
+#: schemas/graph.py:22 schemas/graph.py:57 schemas/graph.py:65
+#: schemas/graph.py:76
+msgid "The element ID"
+msgstr "元素ID"
+
+#: schemas/graph.py:23
+msgid "The max depth"
+msgstr "最大深度"
+
+#: schemas/graph.py:24 schemas/graph.py:31 schemas/graph.py:44
+msgid "The LLM name"
+msgstr "LLM名称"
+
+#: schemas/graph.py:25 schemas/graph.py:32 schemas/graph.py:50
+#: schemas/graph.py:59 schemas/graph.py:70
+msgid "The embedding model"
+msgstr "嵌入模型"
+
+#: schemas/graph.py:26 schemas/graph.py:33 schemas/graph.py:51
+#: schemas/graph.py:60 schemas/graph.py:71
+msgid "The max tokens each chunk"
+msgstr "每块的最大标记数"
+
+#: schemas/graph.py:38
+msgid "The message"
+msgstr "消息"
+
+#: schemas/graph.py:39
+msgid "The prompt element id"
+msgstr "提示元素ID"
+
+#: schemas/graph.py:40
+msgid "The related node element id"
+msgstr "相关节点元素ID"
+
+#: schemas/graph.py:41
+msgid "The only title"
+msgstr "唯一标题"
+
+#: schemas/graph.py:42
+msgid "The limit"
+msgstr "限制"
+
+#: schemas/graph.py:43
+msgid "The offset"
+msgstr "偏移量"
+
+#: schemas/graph.py:45
+msgid "The search type"
+msgstr "搜索类型"
+
+#: schemas/graph.py:46
+msgid "The search scope"
+msgstr "搜索范围"
+
+#: schemas/graph.py:47
+msgid "The return method"
+msgstr "返回方法"
+
+#: schemas/graph.py:48
+msgid "The is summary"
+msgstr "是否摘要"
+
+#: schemas/graph.py:49
+msgid "The chain type"
+msgstr "链类型"
+
+#: schemas/graph.py:56
+msgid "The parent element ID"
+msgstr "父元素ID"
+
+#: schemas/graph.py:58 schemas/graph.py:69
+msgid "The content"
+msgstr "内容"
+
+#: schemas/graph.py:66
+msgid "The source element ID"
+msgstr "源元素ID"
+
+#: schemas/graph.py:67
+msgid "The target element ID"
+msgstr "目标元素ID"
+
+#: schemas/graph.py:68
+msgid "The type"
+msgstr "类型"
+
+#: schemas/graph.py:77
+msgid "The URL"
+msgstr "URL"
+
+#: schemas/result.py:6
+msgid "Executing success"
+msgstr "执行成功"
+
+#: schemas/result.py:13
+msgid "Failed to execute"
+msgstr "执行失败"
+
+#: services/graph_analyze_service.py:56 services/graph_analyze_service.py:75
+msgid "Lib id and subject id are required."
+msgstr "lib_id和subject_id是必需的"
+
+#: services/graph_analyze_service.py:152
+msgid "Graph generation is already in progress."
+msgstr "图谱正在生成中"
+
+#: services/graph_query_service.py:91
+msgid "Knowledge library ID is required"
+msgstr "知识库ID是必需的"
+
+#: services/graph_query_service.py:95
+msgid "Knowledge library not found"
+msgstr "知识库不存在"
+
+#: services/graph_query_service.py:98
+msgid "Knowledge library is not published"
+msgstr "知识库未发布"
+
+#: services/graph_query_service.py:291
+msgid "The data from the URL: {url}"
+msgstr "来自URL的数据：{url}"
+
+#: services/graph_query_service.py:296
+msgid "The data from the file: {file_name}"
+msgstr "来自文件的数据：{file_name}"
+
+#: services/graph_query_service.py:303
+msgid "**Entities**"
+msgstr "**实体**"
+
+#: services/graph_query_service.py:307
+msgid "**Keywords**"
+msgstr "**关键词**"
+
+#: services/graph_query_service.py:311
+msgid "**Tags**"
+msgstr "**标签**"
+
+#: services/knowledge_lib_service.py:42 services/knowledge_lib_service.py:127
+msgid "Title must be provided."
+msgstr "必须提供标题"
+
+#: services/knowledge_lib_service.py:196
+msgid "Knowledge library not found."
+msgstr "知识库不存在"
+
+#: services/knowledge_lib_service.py:201
+msgid "Cannot toggle publish status while generating or analyzing."
+msgstr "在生成或分析过程中无法切换发布状态"
+
+#: services/knowledge_lib_service.py:226
+msgid "Failed to update knowledge library publish status: {e}"
+msgstr "更新知识库发布状态失败：{e}"
+
+#: services/knowledge_lib_service.py:245 services/knowledge_lib_service.py:293
+msgid "Name must be provided."
+msgstr "必须提供名称"
+
+#: services/user_service.py:22 services/user_service.py:141
+msgid "Username must be provided."
+msgstr "必须提供用户名"
+
+#: services/user_service.py:25 services/user_service.py:144
+msgid "Email must be provided."
+msgstr "必须提供电子邮件"
+
+#: services/user_service.py:28
+msgid "Password must be provided."
+msgstr "必须提供密码"
+
+#: services/user_service.py:35
+msgid "Username already registered"
+msgstr "用户名已被注册"
+
+#: services/user_service.py:43 services/user_service.py:166
+msgid "The user already exists, please check the username, email or mobile."
+msgstr "用户已存在，请检查用户名、电子邮件或手机号码"
+
+#: services/user_service.py:45
+msgid "Failed to register user"
+msgstr "注册用户失败"
+
+#: services/user_service.py:58
+msgid "Username or password is incorrect"
+msgstr "用户名或密码不正确"
+
+#: services/user_service.py:63
+msgid "Invalid credentials"
+msgstr "无效凭证"
+
+#: services/user_service.py:116 services/user_service.py:126
+msgid "User not found"
+msgstr "用户未找到"
+
+#: services/user_service.py:153 services/user_service.py:184
+#: services/user_service.py:211
+msgid "User not found."
+msgstr "用户未找到"
+
+#: services/user_service.py:168
+msgid "Failed to update user"
+msgstr "更新用户失败"
+
+#: services/user_service.py:196
+msgid "Original password must be provided."
+msgstr "必须提供原始密码"
+
+#: services/user_service.py:199
+msgid "New password must be provided."
+msgstr "必须提供新密码"
+
+#: services/user_service.py:202
+msgid "Confirm password must be provided."
+msgstr "必须提供确认密码"
+
+#: services/user_service.py:205
+msgid "New password and confirm password must be the same."
+msgstr "新密码和确认密码必须一致"
+
+#: services/user_service.py:214
+msgid "Original password is incorrect."
+msgstr "原始密码不正确"
+

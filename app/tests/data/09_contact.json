@@ -1,0 +1,68 @@
+[
+    {
+        "name": "John Smith",
+        "phone": "+1-202-555-0181",
+        "company": "Boston Tech Solutions",
+        "position": "CEO"
+    },
+    {
+        "name": "Michael Johnson",
+        "phone": "+1-312-555-0123",
+        "company": "Chicago Data Analytics Inc.",
+        "position": "Director"
+    },
+    {
+        "name": "David Brown",
+        "phone": "+1-415-555-0167",
+        "company": "San Francisco Creative Studio",
+        "position": "Marketing Manager"
+    },
+    {
+        "name": "Emily Davis",
+        "phone": "+1-617-555-0145",
+        "company": "New York Fashion House",
+        "position": "Creative Director"
+    },
+    {
+        "name": "Sarah Miller",
+        "phone": "+1-305-555-0198",
+        "company": "Miami Import & Export Co.",
+        "position": "Operations Manager"
+    },
+    {
+        "name": "Robert Wilson",
+        "phone": "+1-212-555-0176",
+        "company": "New York City Electronics",
+        "position": "Product Manager"
+    },
+    {
+        "name": "Jessica Taylor",
+        "phone": "+1-702-555-0134",
+        "company": "Las Vegas Event Planning",
+        "position": "Event Coordinator"
+    },
+    {
+        "name": "Daniel Anderson",
+        "phone": "+1-949-555-0152",
+        "company": "Orange County Software Development",
+        "position": "Software Engineer"
+    },
+    {
+        "name": "Olivia Martinez",
+        "phone": "+1-512-555-0109",
+        "company": "Austin Marketing Agency",
+        "position": "Marketing Specialist"
+    },
+    {
+        "name": "Sophia Lee",
+        "phone": "+1-404-555-0148",
+        "company": "Atlanta Graphic Design Studio",
+        "position": "Graphic Designer"
+    },
+    {
+        "name": "William Clark",
+        "phone": "+1-818-555-0120",
+        "company": "Los Angeles Film Production",
+        "position": "Producer"
+    }
+]

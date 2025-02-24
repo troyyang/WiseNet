@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <person>
+        <name>John Smith</name>
+        <phone>+1-202-555-0181</phone>
+        <company>Boston Tech Solutions</company>
+        <position>CEO</position>
+    </person>
+    <person>
+        <name>Michael Johnson</name>
+        <phone>+1-312-555-0123</phone>
+        <company>Chicago Data Analytics Inc.</company>
+        <position>Director</position>
+    </person>
+    <person>
+        <name>David Brown</name>
+        <phone>+1-415-555-0167</phone>
+        <company>San Francisco Creative Studio</company>
+        <position>Marketing Manager</position>
+    </person>
+    <person>
+        <name>Emily Davis</name>
+        <phone>+1-617-555-0145</phone>
+        <company>New York Fashion House</company>
+        <position>Creative Director</position>
+    </person>
+    <person>
+        <name>Sarah Miller</name>
+        <phone>+1-305-555-0198</phone>
+        <company>Miami Import Export Co.</company>
+        <position>Operations Manager</position>
+    </person>
+    <person>
+        <name>Robert Wilson</name>
+        <phone>+1-212-555-0176</phone>
+        <company>New York City Electronics</company>
+        <position>Product Manager</position>
+    </person>
+    <person>
+        <name>Jessica Taylor</name>
+        <phone>+1-702-555-0134</phone>
+        <company>Las Vegas Event Planning</company>
+        <position>Event Coordinator</position>
+    </person>
+    <person>
+        <name>Daniel Anderson</name>
+        <phone>+1-949-555-0152</phone>
+        <company>Orange County Software Development</company>
+        <position>Software Engineer</position>
+    </person>
+    <person>
+        <name>Olivia Martinez</name>
+        <phone>+1-512-555-0109</phone>
+        <company>Austin Marketing Agency</company>
+        <position>Marketing Specialist</position>
+    </person>
+    <person>
+        <name>Sophia Lee</name>
+        <phone>+1-404-555-0148</phone>
+        <company>Atlanta Graphic Design Studio</company>
+        <position>Graphic Designer</position>
+    </person>
+    <person>
+        <name>William Clark</name>
+        <phone>+1-818-555-0120</phone>
+        <company>Los Angeles Film Production</company>
+        <position>Producer</position>
+    </person>
+</root>
