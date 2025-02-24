@@ -12,9 +12,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 # Configure pip to use a mirror if you download slow
-RUN pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
-    pip3 config set global.trusted-host "pypi.tuna.tsinghua.edu.cn mirrors.pku.edu.cn" && \
-    pip3 config set global.extra-index-url "https://mirrors.pku.edu.cn/pypi/web/simple"
+# RUN pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple && \
+#     pip3 config set global.trusted-host "pypi.tuna.tsinghua.edu.cn mirrors.pku.edu.cn" && \
+#     pip3 config set global.extra-index-url "https://mirrors.pku.edu.cn/pypi/web/simple"
 
 # Install Poetry
 ENV POETRY_HOME=/opt/poetry
@@ -26,7 +26,7 @@ ENV PATH="${POETRY_HOME}/bin:${PATH}"
 # Add Poetry plugin for PyPI mirror
 RUN poetry self add poetry-plugin-pypi-mirror
 # ENV POETRY_PYPI_MIRROR_URL=https://mirrors.aliyun.com/pypi/simple/
-ENV POETRY_PYPI_MIRROR_URL=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+# ENV POETRY_PYPI_MIRROR_URL=https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 # Configure Poetry to not create virtual environments
 RUN poetry config virtualenvs.create false
 
