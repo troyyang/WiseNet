@@ -86,7 +86,6 @@ class GraphQueryService(GraphBaseService):
                 - If `query_condition.return_method == "sync"`, returns a synchronous `KnowledgeQueryResult`.
                 - If `query_condition.return_method == "stream"`, returns an asynchronous generator yielding `KnowledgeQueryResult`.
         """
-        print("----search_knowledge_graph start:")
         if not query_condition.lib_id:
             raise ValueError(_("Knowledge library ID is required"))
 
@@ -98,13 +97,10 @@ class GraphQueryService(GraphBaseService):
             raise ValueError(_("Knowledge library is not published"))
 
         query_result: QueryResult = None
-        print("----search_knowledge_graph:", query_condition)
         if query_condition.prompt_element_id:
             query_result = await self._search_knowledge_graph_by_prompt(query_condition)
-            print("----search_knowledge_graph_by_prompt:", query_result.keywords)
         elif query_condition.related_node_element_id:
             query_result = await self._search_knowledge_graph_by_related_node(query_condition)
-            print("----search_knowledge_graph_by_related_node:", query_result.keywords)
         else:
             query_result = await self._search_knowledge_graph_by_message(query_condition) 
 
@@ -130,7 +126,6 @@ class GraphQueryService(GraphBaseService):
         
         # Prepare messages for summarization
         messages = self._prepare_messages_for_summarization(query_result)
-        print("----messages:", messages)
         if query_condition.return_method == "sync":
             if query_condition.is_summary:
                 summary = Llm.summary_message_history(
@@ -296,7 +291,6 @@ class GraphQueryService(GraphBaseService):
             messages.append(_("The data from the file: {file_name}".format(file_name=query_result.document.name)))
         
         if not query_result.document_page and not query_result.webpage and not query_result.document and query_result.main_node:
-            print("------query_result.main_node.content:", query_result.main_node.content)
             messages.append(query_result.main_node.content)
         
         if query_result.entities:

@@ -323,7 +323,12 @@ class Llm:
                     documents.append(Document(page_content=content))
 
             # Extract key information
-            chain = load_summarize_chain(llm, chain_type=chain_type)
+            if chain_type not in ["stuff", "refine", "map_reduce"]:
+                chain_type = "stuff"
+
+            prompt_template = _("System prompt for summarize message history")
+            prompt = PromptTemplate.from_template(prompt_template)
+            chain = load_summarize_chain(llm, chain_type=chain_type, prompt=prompt)
             ai_summary = chain.invoke(documents)
             if isinstance(ai_summary, dict):
                 return ai_summary

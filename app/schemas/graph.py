@@ -46,7 +46,7 @@ class ChatConditionView(BaseModel):
     search_scope: List[str] = Field(default=["question", "page", "document", "webpage", "node"], description=_("The search scope")) # the order of scope element will effect the priority
     return_method: str = Field(default="sync", description=_("The return method"))  # sync or stream
     is_summary: bool = Field(default=True, description=_("The is summary"))
-    chain_type: str = Field(default="stuff", description=_("The chain type")) # stuff, refine, map-reduce
+    chain_type: str = Field(default="stuff", description=_("The chain type")) # stuff, refine, map_reduce
     embedding_model: str = Field(default="sbert", description=_("The embedding model"))
     max_tokens_each_chunk: int = Field(default=128, description=_("The max tokens each chunk"))
 
