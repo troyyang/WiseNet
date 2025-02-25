@@ -99,6 +99,7 @@ call :create_and_configure_dir "%WISENET_DATA_DIR%\app\data\spacy_models"
 call :create_and_configure_dir "%WISENET_DATA_DIR%\app\data\logs"
 call :create_and_configure_dir "%WISENET_DATA_DIR%\app\data\upload"
 call :create_and_configure_dir "%WISENET_DATA_DIR%\app\cache"
+call :create_and_configure_dir "%WISENET_DATA_DIR%\app\poetry"
 
 :: Check and install spaCy models
 call :check_and_install_spacy_model "en_core_web_lg-3.8.0" "en_core_web_lg-3.8.0.tar.gz" "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0.tar.gz"

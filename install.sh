@@ -246,6 +246,7 @@ create_and_configure_dir "$WISENET_DATA_DIR/app/data/spacy_models"
 create_and_configure_dir "$WISENET_DATA_DIR/app/data/logs"
 create_and_configure_dir "$WISENET_DATA_DIR/app/data/upload"
 create_and_configure_dir "$WISENET_DATA_DIR/app/cache"
+create_and_configure_dir "$WISENET_DATA_DIR/app/poetry"
 
 echo "Directories created and permissions set."
 

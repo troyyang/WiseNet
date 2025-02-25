@@ -41,7 +41,7 @@ ENV POETRY_INSTALLER_MAX_WORKERS=1
 ENV POETRY_HTTP_TIMEOUT=600
 
 # Install dependencies with retry mechanism
-RUN pip install nvidia-cublas-cu12 --index-url https://pypi.org/simple
+RUN pip install nvidia-cublas-cu12
 RUN retry_count=0; \
     until poetry install --no-interaction --only main; do \
         if [ $retry_count -ge 3 ]; then \
