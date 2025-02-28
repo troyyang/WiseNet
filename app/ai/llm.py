@@ -23,7 +23,7 @@ class Llm:
     @classmethod
     def all_llms(cls) -> List[str]:
         """Returns a list of all supported LLM names."""
-        return ["wizardlm2", "llama3.1", 
+        return ["wizardlm2", "llama3.1", "deepseek-r1:8b",
                 "gpt-4o", "gpt-4-turbo", "gpt-4", 
                 "claude3.5-sonnet", "claude3.5-haiku", "claude3.5-opus",
                 "deepseek", 
@@ -36,6 +36,7 @@ class Llm:
         model_info = {
             "wizardlm2": "A powerful open-source LLM based on LLaMA.",
             "llama3.1": "Meta's LLaMA 3 model.",
+            "deepseek-r1:8b": "DeepSeek's LLM.",
             "gpt-4o": "OpenAI's GPT-4o model.",
             "gpt-4-turbo": "OpenAI's GPT-4 Turbo model.",
             "gpt-4": "OpenAI's GPT-4 model.",

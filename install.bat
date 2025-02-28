@@ -113,6 +113,7 @@ call :log "Containers started."
 :: Install Ollama models
 call :check_and_install_model "llama3.1"
 call :check_and_install_model "wizardlm2"
+call :check_and_install_model "deepseek-r1:8b"
 docker exec -it ollama ollama list
 
 where curl >nul 2>&1
